@@ -1,0 +1,244 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #026aa7;
+    color: white;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header button {
+    background-color: #5aac44;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #519839;
+}
+
+#buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#show-boards {
+    background-color: #5aac44;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#show-boards:hover {
+    background-color: #519839;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.board {
+    background-color: #0079bf;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.board-title {
+    width: calc(100% - 20px); /* Ajusta a largura para caber dentro do quadro */
+    padding: 10px;
+    margin: 10px auto; /* Centraliza o título horizontalmente */
+    border: none;
+    border-radius: 3px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #005a8c;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: block; /* Garante que seja um elemento de bloco */
+}
+
+
+.add-list, .delete-board {
+    background-color: #5aac44;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.add-list:hover, .delete-board:hover {
+    background-color: #519839;
+}
+
+#boards-menu {
+    width: 250px;
+    background-color: #026aa7;
+    color: white;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+#boards-menu.active {
+    transform: translateX(0);
+}
+
+#boards-menu h2 {
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+#boards-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#boards-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#boards-menu ul li:hover {
+    background-color: #4c9ed9;
+    transform: translateX(5px);
+}
+
+#boards-menu ul li.active {
+    background-color: #1d78c1;
+}
+
+#boards-menu ul li.active span {
+    color: #fff;
+}
+
+#boards-menu ul li button {
+    margin-left: 0.5rem;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+
+#boards-menu ul li button:hover {
+    background: #e60000;
+}
+
+#edit-board {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#edit-board:hover {
+    background-color: #e68900;
+}
+
+.edit-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-container label {
+    font-size: 14px;
+    color: #333;
+}
+
+.edit-container input[type="color"] {
+    width: 100px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+#save-changes, #cancel-changes {
+    background-color: #5aac44;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#save-changes:hover, #cancel-changes:hover {
+    background-color: #519839;
+}
+
+#cancel-changes {
+    background-color: #d32f2f;
+}
+
+#cancel-changes:hover {
+    background-color: #b71c1c;
+}
+
+.favorite-icon {
+    color: #ccc; /* Cor padrão para não favoritos */
+    cursor: pointer;
+    margin-right: 10px; /* Espaçamento entre o ícone e o título */
+}
+
+.favorite-icon.favorite {
+    color: #ff0; /* Cor dourada para favoritos */
+}

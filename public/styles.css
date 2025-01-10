@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #026aa7;
+    color: white;
+    padding: 10px 20px;
+    gap: 10px; /* Adiciona um espaço entre os elementos do header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px; /* Tamanho maior da fonte */
+    font-family: 'Pacifico', cursive; /* Fonte estilizada */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animação suave */
+}
+
+header h1:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente quando passado o mouse */
+    color: #ffeb3b; /* Muda a cor ao passar o mouse */
+}
+
+header .logout-button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+header .logout-button:hover {
+    background-color: #b71c1c;
+}
+
+header button {
+    background-color: #5aac44;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #519839;
+}
+
+#buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#show-boards {
+    background-color: #5aac44;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#show-boards:hover {
+    background-color: #519839;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form label {
+    font-size: 14px;
+    color: #555;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.cta-buttons a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.cta-buttons a:hover {
+    background-color: #0056b3;
+}
+
+.edit-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-container label {
+    font-size: 14px;
+    color: #333;
+}
+
+.edit-container input[type="color"] {
+    width: 100px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+#save-changes, #cancel-changes {
+    background-color: #5aac44;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#save-changes:hover, #cancel-changes:hover {
+    background-color: #519839;
+}
+
+#cancel-changes {
+    background-color: #d32f2f;
+}
+
+#cancel-changes:hover {
+    background-color: #b71c1c;
+}
+
+.trash {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #d32f2f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.trash:hover {
+    background-color: #b71c1c;
+}
+
+.favorite-icon {
+    color: #ccc; /* Cor padrão para não favoritos */
+    cursor: pointer;
+    margin-right: 10px; /* Espaçamento entre o ícone e o título */
+}
+
+.favorite-icon.favorite {
+    color: #ff0; /* Cor dourada para favoritos */
+}
+

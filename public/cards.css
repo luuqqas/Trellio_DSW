@@ -1,0 +1,66 @@
+.card {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Garante que o cartão fique dentro da lista */
+    position: relative;
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+.card-title {
+    width: calc(100% - 40px); /* Ajusta a largura do título para evitar sobreposição */
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    box-sizing: border-box; /* Garante que o padding não afete o layout */
+    margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+    resize: none; /* Remove a opção de redimensionamento */
+    overflow: auto; /* Adiciona rolagem automática */
+    white-space: pre-wrap; /* Permite a quebra de linha */
+    word-wrap: break-word; /* Quebra palavras longas */
+    height: auto; /* Permite que a altura se ajuste conforme o conteúdo */
+    min-height: 40px; /* Define uma altura mínima para o campo */
+    max-height: 150px; /* Define uma altura máxima para o campo */
+}
+
+.card-content {
+    margin-bottom: 10px;
+}
+
+.card-dates {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+    color: #888;
+    text-align: right;
+}
+
+.card-dates.fixed-dates {
+    color: #888 !important;
+}
+
+.delete-card-icon {
+    position: absolute;
+    top: 10px; /* Move o botão para o topo do cartão */
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+    color: #d32f2f;
+}
+
+.delete-card-icon:hover {
+    color: #b71c1c;
+}
+
+.placeholder {
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}

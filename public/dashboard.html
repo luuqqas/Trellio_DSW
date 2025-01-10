@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="boards.css">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="lists.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Inclui o arquivo styles.css -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> <!-- Inclui a fonte Pacifico -->
+    <!-- Font Awesome CDN para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Trellio</h1>
+            <button class="logout-button" onclick="logout()">Logout</button> <!-- Adiciona o botão de Logout -->
+            <div id="buttons-container">
+                <button id="create-board">Criar Quadro</button>
+                <button id="edit-board" style="display: none;">Editar Quadro</button>
+                <button id="show-boards" style="display: none;">Mostrar Quadros</button>
+            </div>
+        </header>
+        <main>
+            <aside id="boards-menu" class="boards-menu">
+                <h2>Quadros</h2>
+                <ul id="boards-list">
+                    <!-- Exemplo de item de quadro com ícone de estrela -->
+                    <li id="board-{boardId}">
+                        <span>{boardTitle}</span>
+                        <i class="fa fa-star favorite-icon" onclick="toggleFavorite('{boardId}')"></i>
+                    </li>
+                </ul>
+            </aside>
+            <section id="board-view">
+                <!-- Aqui vai o conteúdo dos quadros -->
+                <div id="boards-container"></div>
+            </section>
+        </main>
+    </div>
+    <!-- Inclua a biblioteca SortableJS através da CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <!-- Inclua os arquivos JavaScript -->
+    <script src="cards.js"></script>
+    <script src="dashboard.js"></script>
+    <script>
+    function logout() {
+        // Faça a lógica de logout aqui, como limpar tokens de autenticação ou cookies
+        // Por exemplo, se você estiver usando tokens de sessão armazenados localmente:
+        localStorage.removeItem('authToken');
+
+        // Redirecionar para a página de login ou página inicial
+        window.location.href = 'index.html';
+    }
+    </script>
+</body>
+</html>

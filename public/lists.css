@@ -1,0 +1,39 @@
+.list {
+    background-color: #dfe1e6;
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px; /* Define a largura da lista */
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura total */
+    position: relative; /* Permite o posicionamento absoluto dos elementos dentro da lista */
+}
+
+.list-title {
+    width: calc(100% - 20px); /* Ajusta a largura do título para evitar sobreposição */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+    box-sizing: border-box; /* Garante que o padding não afete o layout */
+    overflow: auto; /* Adiciona rolagem automática */
+    white-space: pre-wrap; /* Permite a quebra de linha */
+    word-wrap: break-word; /* Quebra palavras longas */
+}
+
+.add-card, .delete-list {
+    background-color: #5aac44;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.add-card:hover, .delete-list:hover {
+    background-color: #519839;
+}
+
+.lists-container {
+    display: flex;
+    gap: 10px;
+}
